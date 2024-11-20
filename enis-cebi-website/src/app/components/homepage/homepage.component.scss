@@ -1,0 +1,22 @@
+
+.image-container {
+    width: 100%;
+    display: flex;
+    position: relative;}
+
+.tilted-image-left {
+    width: 55%;
+    height: auto;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 10%) 100%, 0 100%);
+    position: relative;
+    z-index: 1;
+    margin-right: -10%; /* Resimleri birbirine yaklaştırmak için */
+}
+
+.tilted-image-right {
+    width: 55%;
+    height: auto;
+    clip-path: polygon(10% 0,100%  0, 100% 100%, 0 100%);
+    position: relative;
+    z-index: 2;
+}
