@@ -5,7 +5,7 @@
     position: relative;}
 
 .tilted-image-left {
-    width: 55%;
+    width: 60%;
     height: auto;
     clip-path: polygon(0 0, 100% 0, calc(100% - 10%) 100%, 0 100%);
     position: relative;
@@ -14,9 +14,12 @@
 }
 
 .tilted-image-right {
-    width: 55%;
+    width: 50%;
     height: auto;
     clip-path: polygon(10% 0,100%  0, 100% 100%, 0 100%);
     position: relative;
     z-index: 2;
+}
+.image-container img {
+    display: block;
 }
