@@ -1,8 +1,8 @@
-
 .image-container {
     width: 100%;
     display: flex;
-    position: relative;}
+    position: relative;
+}
 
 .tilted-image-left {
     width: 60%;
@@ -10,16 +10,24 @@
     clip-path: polygon(0 0, 100% 0, calc(100% - 10%) 100%, 0 100%);
     position: relative;
     z-index: 1;
-    margin-right: -10%; /* Resimleri birbirine yaklaştırmak için */
+    margin-right: -10%;
+    /* Resimleri birbirine yaklaştırmak için */
 }
 
 .tilted-image-right {
     width: 50%;
     height: auto;
-    clip-path: polygon(10% 0,100%  0, 100% 100%, 0 100%);
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
     position: relative;
     z-index: 2;
 }
+
 .image-container img {
     display: block;
+}
+
+.carousel-item {
+
+    transition: transform 10s linear;
+
 }
