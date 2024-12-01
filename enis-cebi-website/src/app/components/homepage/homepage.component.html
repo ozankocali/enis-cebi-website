@@ -14,25 +14,49 @@
     </div>
 
     <div class="image-container">
-        <div style=" height: 250px; background-color: lightblue;" class="tilted-image-left">
-            <img src="/assets/enis_cebi_logo.png" alt="Logo" width="50%" height="50%"
-                style="object-fit: cover; margin-left: 70px; margin-top: 30px;" />
+        <div style="background-color: lightblue;" class="tilted-image-left">
+            <img src="/assets/enis_cebi_logo.png" alt="Logo" width="50%" height="100%" class="img-fluid"
+                style="object-fit: contain;  margin-right: 15%;" class="mb-3 mb-3" />
         </div>
 
-        <div style=" height: 250px; background-color: pink;" class="tilted-image-right">
-            <img src="/assets/yeni_nesil_kiz_logo.png" class="img-fluid " alt="Logo" width="60%" height="60%"
-                style="object-fit: cover; margin-left: 200px; margin-top: 30px;" />
+        <div style=" background-color: pink;" class="tilted-image-right">
+            <img src="/assets/yeni_nesil_kiz_logo.png" class="img-fluid" alt="Logo" width="60%" height="100%"
+                style="object-fit: contain; " class="mb-3 mb-3" />
 
         </div>
     </div>
     <div>
-        <div class="row">
-            <div class="col-md-6">
+        <div *ngIf="screenWidth>800" class="row">
+            <div class="col">
                 <div style="width: 100%;" class="tilted-image-left">
+                    <img src="/assets/enis_cebi_bina.jpg" alt="Logo" width="100%"  style="object-fit: contain;" />
+                </div>
+            </div>
+            <div class="col d-flex flex-column justify-content-center mt-3">
+                <h3>Hakkımızda</h3>
+                <p>CEBEN İnşaat, 2008 yılından bu yana İnşaat ve Turizm sektöründe faaliyet göstermektedir.
+                    <br>
+                    2013'ten itibaren yurt hizmetlerinde fark yaratmak amacıyla sektöre giriş yaptık.
+                    <br>
+                    Şehir dışında yaşamanın zorluklarını tecrübe etmiş bireyler olarak,
+                    öğrencilerimize aile sıcaklığında bir yaşam sunmayı amaçlıyoruz.
+                    <br>
+                    Enis Çebi ailesinin bir parçası olan herkesi değerli görüyor ve büyüyen ailemizle gurur
+                    duyuyoruz.
+                    <br>
+                  
+                </p>
+                <i>Enis Çebi Ailesi</i> 
+                <button class="btn btn-warning ms-auto" style="width: 60%;">Daha fazlası için tıklayın</button>
+            </div>
+        </div>
+        <div *ngIf="screenWidth<=800">
+            <div class="col">
+                <div style="width: 100%;">
                     <img src="/assets/enis_cebi_bina.jpg" alt="Logo" width="100%" style="object-fit: contain;" />
                 </div>
             </div>
-            <div class="col-md-6 d-flex flex-column justify-content-center">
+            <div class="col d-flex flex-column" style="text-align: center;">
                 <h2>Hakkımızda</h2>
                 <p>CEBEN İnşaat, 2008 yılından bu yana İnşaat ve Turizm sektöründe faaliyet göstermektedir.
                     <br>
@@ -48,17 +72,17 @@
                     <br>
                     Enis Çebi Ailesi
                 </p>
-                <button class="btn btn-warning" style="width: 30%;">Daha fazlası için tıklayın</button>
+                <button class="btn btn-warning" style="width: 100%;">Daha fazlası için tıklayın</button>
             </div>
         </div>
     </div>
     <div>
-        <h2 class="text-center">Hizmet ve İmkanlarımız</h2>
-        <div class="row" style="margin-left: 20%; margin-right: 20%; margin-top: 50px;">
+        <h2 class="text-center mt-3 mb-5">Hizmet ve İmkanlarımız</h2>
+        <div class="row" style="margin-left: 15%; margin-right: 15%; ">
             <div *ngFor="let service of services" class="col-md-3 d-flex flex-column align-items-center mb-3">
                 <div class="d-flex justify-content-center "
-                    style="background-color: yellow; border-radius: 50%; width: 100px; height: 100px;">
-                    <i class="mt-3 bi" [ngClass]="service.icon" style="font-size: 3rem;"></i>
+                    style="background-color: yellow; border-radius: 50%; width: 12vh; height: 12vh;">
+                    <i class="mt-3 bi" [ngClass]="service.icon" style="font-size: 6vh;"></i>
                 </div>
                 <p class="mt-3">{{ service.name }}</p>
             </div>

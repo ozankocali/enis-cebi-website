@@ -5,20 +5,26 @@
 }
 
 .tilted-image-left {
+    display: flex;
+    justify-content: center; /* Yatay olarak ortalar */
+    align-items: center;
     width: 60%;
     height: auto;
     clip-path: polygon(0 0, 100% 0, calc(100% - 10%) 100%, 0 100%);
     position: relative;
     z-index: 1;
-    margin-right: -10%;
     /* Resimleri birbirine yaklaştırmak için */
 }
 
 .tilted-image-right {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     width: 50%;
     height: auto;
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
     position: relative;
+    margin-left: -10%;
     z-index: 2;
 }
 
