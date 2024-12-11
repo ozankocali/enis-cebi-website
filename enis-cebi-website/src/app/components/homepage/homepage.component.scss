@@ -6,7 +6,8 @@
 
 .tilted-image-left {
     display: flex;
-    justify-content: center; /* Yatay olarak ortalar */
+    justify-content: center;
+    /* Yatay olarak ortalar */
     align-items: center;
     width: 60%;
     height: auto;
@@ -18,7 +19,7 @@
 
 .tilted-image-right {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     width: 50%;
     height: auto;
@@ -33,7 +34,5 @@
 }
 
 .carousel-item {
-
     transition: transform 10s linear;
-
 }
