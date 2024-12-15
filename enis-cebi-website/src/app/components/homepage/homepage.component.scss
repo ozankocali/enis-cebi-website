@@ -17,6 +17,20 @@
     /* Resimleri birbirine yaklaştırmak için */
 }
 
+
+.tilted-image-left-1{
+    display: flex;
+    justify-content: center;
+    /* Yatay olarak ortalar */
+    align-items: center;
+    width: 70%;
+    height: auto;
+    clip-path: polygon(0 0, 90% 0%, 100% 100%, 0% 100%);
+    position: relative;
+    z-index: 1;
+    /* Resimleri birbirine yaklaştırmak için */
+}
+
 .tilted-image-right {
     display: flex;
     justify-content: center;
