@@ -14,14 +14,18 @@
     </div>
 
     <div class="image-container">
-        <div style="background-color: lightblue;" class="tilted-image-left">
-            <img src="/assets/enis_cebi_logo.png" alt="Logo" width="50%" height="100%" class="img-fluid"
-                style="object-fit: contain;  margin-right: 15%;" class="mb-3 mb-3" />
+        <div class="tilted-image-left">
+            <img src="/assets/enis_cebi_logo.png" alt="Logo" width="50%" height="100%" class="img-fluid p-3 transition"
+                style="object-fit: contain;  margin-right: 15%;"/>
+                <span class="site-link">Enis Çebi Yurtları</span>
+
         </div>
 
-        <div style=" background-color: pink;" class="tilted-image-right">
-            <a class="img-fluid mb-3 mb-3" style="object-fit: contain; align-items: center;" href="https://google.com"> <img
-                    src="/assets/yeni_nesil_kiz_logo.png" alt="Logo" width="60%" height="100%" /></a>
+        <div class="tilted-image-right">
+            <a class="img-fluid d-flex justify-content-center align-items-center" style="object-fit: contain; position: relative;" href="http://yeninesilogrenciyurtlari.com/" target="_blank">
+            <img src="/assets/yeni_nesil_kiz_logo.png" alt="Logo" width="60%" height="100%" class="img-fluid p-1 transition" />
+            <span class="site-link">Yeni Nesil Kız Öğrenci Yurdu Sitesine Git</span>
+            </a>
         </div>
     </div>
     <div>
@@ -31,9 +35,9 @@
                     <img src="/assets/enis_cebi_bina.jpg" alt="Logo" width="100%" style="object-fit: contain;" />
                 </div>
             </div>
-            <div class="col-6 d-flex flex-column justify-content-center mt-3">
+            <div class="col-6 d-flex flex-column justify-content-center align-items-center mt-3">
                 <h3>Hakkımızda</h3>
-                <p>CEBEN İnşaat, 2008 yılından bu yana İnşaat ve Turizm sektöründe faaliyet göstermektedir.
+                <p class="text-center" >CEBEN İnşaat, 2008 yılından bu yana İnşaat ve Turizm sektöründe faaliyet göstermektedir.
                     <br>
                     2013'ten itibaren yurt hizmetlerinde fark yaratmak amacıyla sektöre giriş yaptık.
                     <br>
@@ -46,7 +50,8 @@
 
                 </p>
                 <i>Enis Çebi Ailesi</i>
-                <button class="btn btn-warning ms-auto" style="width: 60%;">Daha fazlası için tıklayın</button>
+                <br>
+                <button class="btn btn-warning " style="width: 60%;">Daha fazlası için tıklayın</button>
             </div>
         </div>
         <div *ngIf="screenWidth<=800">
