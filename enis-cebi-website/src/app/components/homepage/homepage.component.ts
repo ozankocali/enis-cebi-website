@@ -1,5 +1,5 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
@@ -8,7 +8,10 @@ import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
-export class HomepageComponent {
+export class HomepageComponent implements OnInit {
+
+
+
   services = [
     { icon: 'bi-wifi', name: 'Ücretsiz Wi-Fi' },
     { icon: 'bi-house-door', name: '24/7 Güvenlik' },
@@ -30,9 +33,14 @@ export class HomepageComponent {
       this.screenWidth = window.innerWidth;
       this.screenHeight = window.innerHeight;
     }
-    else{
+    else {
       this.screenWidth = 1000;
       this.screenHeight = 1000;
+    }
+  }
+  ngOnInit(): void {
+    if (typeof document !== 'undefined') {
+      document.getElementById("modalButton")?.click();
     }
   }
 
