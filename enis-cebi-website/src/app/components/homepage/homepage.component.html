@@ -97,7 +97,7 @@
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div *ngIf="screenWidth>=800" class="container-fluid">
         <div class="row" style="align-items: end;">
             <div class=" col-3">
                 <img src="/assets/miniCarousel/4.png" alt="Logo" style="width: 100%; ;" />
@@ -125,6 +125,32 @@
             </div>
             <div class="col-2"></div>
 
+        </div>
+    </div>
+
+    <div *ngIf="screenWidth<800" class="container-fluid">
+        <div class="row m-1">
+            <div class="col">
+                <img src="/assets/miniCarousel/4.png" alt="Logo" style="width: 100%; ;" />
+            </div>
+            <div class="col ml-1">
+                <img src="/assets/miniCarousel/5.png" alt="Logo" style="width: 100%;" />
+
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col">
+                <img src="/assets/miniCarousel/3.png" alt="Logo" style="width: 100%;" />
+
+            </div>
+            <div class="col ml-1">
+                <img src="/assets/miniCarousel/2.png" alt="Logo" style="width: 100%;" />
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col">
+                <img src="/assets/miniCarousel/1.png" alt="Logo" style="width: 100%;" />
+            </div>
         </div>
     </div>
 
