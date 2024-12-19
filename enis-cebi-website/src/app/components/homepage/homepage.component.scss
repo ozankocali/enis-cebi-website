@@ -98,3 +98,27 @@
 .carousel-item {
     transition: transform 10s linear;
 }
+
+.services-container {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.service-item {
+    width: 25%; /* 4 ikon yan yana */
+}
+
+.icon-container {
+    background-color: #ffc108;
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+    font-size: 5vh;
+}
+
+/* Ekran boyutu 800px veya daha küçükse */
+@media (max-width: 800px) {
+    .service-item {
+        width: 50%; /* 2 ikon yan yana */
+    }
+}

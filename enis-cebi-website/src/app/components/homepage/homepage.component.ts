@@ -13,16 +13,19 @@ export class HomepageComponent implements OnInit {
 
 
   services = [
-    { icon: 'bi-wifi', name: 'Ücretsiz Wi-Fi' },
-    { icon: 'bi-house-door', name: '24/7 Güvenlik' },
-    { icon: 'bi-cup-hot', name: 'Kafeterya' },
-    { icon: 'bi-tv', name: 'TV Odası' },
-    { icon: 'bi-person-arms-up', name: 'Spor Salonu' },
+    { icon: 'bi-wifi', name: 'Wi-Fi' },
+    { icon: 'bi-camera-video', name: '24/7 Güvenlik' },
+    { icon: 'bi-droplet', name: 'Su Sebili' },
     { icon: 'bi-basket', name: 'Çamaşırhane' },
-    { icon: 'bi-bus-front', name: 'Servis' },
+    { icon: 'bi-emoji-smile', name: 'Yüz Tanıma' },
+    { icon: 'bi-lightning-charge', name: 'Kesintisiz Kaynaklar' },
+    { icon: 'bi-moon-stars', name: 'Mescid' },
+    { icon: 'bi-door-closed', name: 'Kartlı Oda Sistemi' },
+    { icon: 'bi-person-arms-up', name: 'Spor Salonu' },
+    { icon: 'bi-stars', name: 'Temizlik' },
     { icon: 'bi-book', name: 'Kütüphane' },
-    { icon: 'bi-people', name: 'Sosyal Alan' },
-    { icon: 'bi-gear', name: 'Teknik Destek' }
+    { icon: 'bi-fire', name: 'Yangın Sensörü' }
+
   ];
 
   screenWidth: number;
