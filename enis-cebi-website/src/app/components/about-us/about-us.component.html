@@ -1,69 +1,54 @@
 <div style="margin-top: 91px;">
     <div *ngIf="screenWidth>800" class="about-us-container">
-        <div class="about-us-image">
-            <img src="assets/enis_cebi_bina.jpg" alt="Bina Görseli" style="object-fit: contain;" />
-        </div>
-        <div class="about-us-content" style="text-align: center;">
-            <h2>Hakkımızda</h2>
-            <p>
-                CEBEN İNŞAAT SAN. ve TİC. LTD. Şirketi olarak 2008 yılından bu yana İnşaat ve
-                Turizm sektöründe hizmet vermekteyiz. Bir aile şirketi olan CEBEN İnşaat,
-                İç Mimar Ercan Çebi ve İnşaat Mühendisi Emrah Çebi tarafından yönetilmektedir.
-            </p>
-            <p>
-                Şirket olarak 2013 yılında alışılmışın dışında bir yurt hizmeti sunmak amacıyla
-                sektöre hızlı ve başarılı bir giriş yaptık.
-            </p>
-            <p>
-                Öğrencilik yıllarında şehir dışında yaşamanın zorluklarını tecrübe etmiş bireyler
-                olarak, öğrencilerimizin ailelerinden ve evlerinden uzakta geçirdikleri hayatı
-                kolaylaştırmayı hedefliyoruz.
-            </p>
-            <p>
-                Öğrencilerimizin geriye dönüp baktıklarında aile sıcaklığında bir yurt
-                yaşantısı geçmiş olmaları ve bizleri o yılların bir parçası olarak görmeleri
-                öncelikli temennimizdir.
-            </p>
-            <p>
-                Aramıza katılan herkesi Enis Çebi ailesinin vazgeçilmez bir bireyi olarak
-                görüyor, her geçen yıl büyüyen ailemizle gurur duyuyoruz.
-            </p>
-            <p class="signature">Enis Çebi Ailesi</p>
-        </div>
+      <div class="about-us-image">
+        <img src="assets/enis_cebi_bina.jpg" alt="{{ 'ABOUT.IMAGE_ALT' | translate }}" style="object-fit: contain;" />
+      </div>
+      <div class="about-us-content" style="text-align: center;">
+        <h2>{{ 'ABOUT.TITLE' | translate }}</h2>
+        <p>
+          {{ 'ABOUT.PARAGRAPH_1' | translate }}
+        </p>
+        <p>
+          {{ 'ABOUT.PARAGRAPH_2' | translate }}
+        </p>
+        <p>
+          {{ 'ABOUT.PARAGRAPH_3' | translate }}
+        </p>
+        <p>
+          {{ 'ABOUT.PARAGRAPH_4' | translate }}
+        </p>
+        <p>
+          {{ 'ABOUT.PARAGRAPH_5' | translate }}
+        </p>
+        <p class="signature">{{ 'ABOUT.SIGNATURE' | translate }}</p>
+      </div>
     </div>
-
+  
     <div *ngIf="screenWidth<800">
-        <div class="container" style=" overflow: hidden;">
-            <img src="assets/enis_cebi_bina.jpg" alt="Bina Görseli" style="height: auto; width: 100%;" />
+      <div class="container" style="overflow: hidden;">
+        <img src="assets/enis_cebi_bina.jpg" alt="{{ 'ABOUT.IMAGE_ALT' | translate }}" style="height: auto; width: 100%;" />
+      </div>
+      <div class="container-fluid">
+        <div class="about-us-content" style="text-align: center;">
+          <h2>{{ 'ABOUT.TITLE' | translate }}</h2>
+          <p>
+            {{ 'ABOUT.PARAGRAPH_1' | translate }}
+          </p>
+          <p>
+            {{ 'ABOUT.PARAGRAPH_2' | translate }}
+          </p>
+          <p>
+            {{ 'ABOUT.PARAGRAPH_3' | translate }}
+          </p>
+          <p>
+            {{ 'ABOUT.PARAGRAPH_4' | translate }}
+          </p>
+          <p>
+            {{ 'ABOUT.PARAGRAPH_5' | translate }}
+          </p>
+          <p class="signature">{{ 'ABOUT.SIGNATURE' | translate }}</p>
         </div>
-        <div class="container-fluid">
-            <div class="about-us-content" style="text-align: center;">
-                <h2>Hakkımızda</h2>
-                <p>
-                    CEBEN İNŞAAT SAN. ve TİC. LTD. Şirketi olarak 2008 yılından bu yana İnşaat ve
-                    Turizm sektöründe hizmet vermekteyiz. Bir aile şirketi olan CEBEN İnşaat,
-                    İç Mimar Ercan Çebi ve İnşaat Mühendisi Emrah Çebi tarafından yönetilmektedir.
-                </p>
-                <p>
-                    Şirket olarak 2013 yılında alışılmışın dışında bir yurt hizmeti sunmak amacıyla
-                    sektöre hızlı ve başarılı bir giriş yaptık.
-                </p>
-                <p>
-                    Öğrencilik yıllarında şehir dışında yaşamanın zorluklarını tecrübe etmiş bireyler
-                    olarak, öğrencilerimizin ailelerinden ve evlerinden uzakta geçirdikleri hayatı
-                    kolaylaştırmayı hedefliyoruz.
-                </p>
-                <p>
-                    Öğrencilerimizin geriye dönüp baktıklarında aile sıcaklığında bir yurt
-                    yaşantısı geçmiş olmaları ve bizleri o yılların bir parçası olarak görmeleri
-                    öncelikli temennimizdir.
-                </p>
-                <p>
-                    Aramıza katılan herkesi Enis Çebi ailesinin vazgeçilmez bir bireyi olarak
-                    görüyor, her geçen yıl büyüyen ailemizle gurur duyuyoruz.
-                </p>
-                <p class="signature">Enis Çebi Ailesi</p>
-            </div>
-        </div>
-
+      </div>
     </div>
+  </div>
+  

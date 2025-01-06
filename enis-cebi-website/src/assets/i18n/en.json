@@ -1,0 +1,92 @@
+{
+  "NAVBAR": {
+    "OUR_DORMS": "Our Dorms",
+    "GALLERY_AND_FACILITIES": "Gallery and Facilities",
+    "ABOUT_US": "About Us",
+    "OUR_EVENTS": "Our Events",
+    "CONTACT_US": "Contact Us"
+  },
+  "facilities": {
+    "serviceTitle": "Free Shuttle Service",
+    "serviceDescription1": "We have a shuttle service to Istanbul Gelişim University between 08:00 and 17:00 based on class schedules.",
+    "serviceDescription2": "We have a shuttle service to the Metrobus at specific times between 08:00 and 17:00.",
+    "earthquakeTitle": "Earthquake Safety",
+    "earthquakeDescription": "Our male dormitory building is the only one in the region built with a dormitory permit and complies with the latest earthquake regulations.",
+    "transportTitle": "Kamil Koç & Pamukkale",
+    "transportDescription": "Your comfort is always important to us. Thanks to our terminals within the company, you can travel economically and benefit from shuttle services to and from our dormitories.",
+    "roomsTitle": "Our Rooms"
+  },
+  "ENIS_CEBI_YURTLARI": "Enis Çebi Yurtları",
+  "NEW_GIRL_DORM": "Go to Yeni Nesil Kız Öğrenci Yurdu Site",
+  "ABOUT_US": "About Us",
+  "ABOUT_US_CONTENT": "CEBEN İnşaat has been operating in the construction and tourism sectors since 2008. We entered the dormitory service sector in 2013 with the aim of making a difference. Having experienced the difficulties of living in a city away from home, we aim to offer a homely living environment for students.",
+  "ENIS_CEBI_FAMILY": "Enis Çebi Family",
+  "CLICK_FOR_MORE": "Click for More",
+  "OUR_SERVICES": "Our Services",
+  "EVENT_MOMENTS": "Moments from Our Events",
+  "CONTACT": "Contact",
+  "CONTACT_TEXT": "Feel free to contact us with any questions, feedback, or suggestions.",
+  "CONTACT_PHONE_1": "Consultation: +90 546 676 98 78",
+  "CONTACT_PHONE_2": "Male Dormitory Management: +90 546 232 47 24",
+  "CONTACT_ADDRESS": "Address: Üniversite Mh. Mareşal Cad. No:60 Parseller - Avcılar/İstanbul",
+  "SERVICE": {
+    "WIFI": {
+      "NAME": "Wi-Fi",
+      "DESC": "Access to the internet on each floor with fiber optic infrastructure."
+    },
+    "24_7_SECURITY": {
+      "NAME": "24/7 Security",
+      "DESC": "All common areas and outdoor spaces are under 24/7 surveillance."
+    },
+    "WATER_DISPENSER": {
+      "NAME": "Water Dispenser",
+      "DESC": "Cold and hot water available 24/7 on each floor."
+    },
+    "LAUNDRY": {
+      "NAME": "Laundry",
+      "DESC": "Free to use."
+    },
+    "FACE_RECOGNITION": {
+      "NAME": "Face Recognition",
+      "DESC": "For your safety and a tech-based attendance system."
+    },
+    "UNINTERRUPTED_RESOURCES": {
+      "NAME": "Uninterrupted Resources",
+      "DESC": "Power outages do not affect us."
+    },
+    "MOSQUE": {
+      "NAME": "Mosque",
+      "DESC": "Open 24/7."
+    },
+    "CARD_ACCESS_ROOM_SYSTEM": {
+      "NAME": "Card Access Room System",
+      "DESC": "Your rooms are accessible only to you and your roommates."
+    },
+    "GYM": {
+      "NAME": "Gym",
+      "DESC": "A suitable environment for healthy living."
+    },
+    "CLEANING": {
+      "NAME": "Cleaning",
+      "DESC": "Professional hands using the best products for your health and hygiene."
+    },
+    "LIBRARY": {
+      "NAME": "Library",
+      "DESC": "A reading area equipped with various books."
+    },
+    "FIRE_SENSOR": {
+      "NAME": "Fire Sensor",
+      "DESC": "Each room in the men's dorm has a fire sprinkler, and there are fire hoses on each floor."
+    }
+  },
+  "ABOUT": {
+    "IMAGE_ALT": "Building Image",
+    "TITLE": "About Us",
+    "PARAGRAPH_1": "Since 2008, CEBEN CONSTRUCTION INC. has been serving in the Construction and Tourism sectors. CEBEN Construction, a family company, is managed by Interior Architect Ercan Çebi and Civil Engineer Emrah Çebi.",
+    "PARAGRAPH_2": "As a company, we made a fast and successful entry into the sector in 2013 to provide an unconventional dormitory service.",
+    "PARAGRAPH_3": "As individuals who have experienced the challenges of living outside the city during our student years, we aim to make life easier for our students who live away from their families and homes.",
+    "PARAGRAPH_4": "Our primary wish is for our students to look back and have experienced a dorm life full of family warmth, and to see us as a part of those years.",
+    "PARAGRAPH_5": "We consider everyone who joins us as an indispensable member of the Enis Çebi family and take pride in our ever-growing family every year.",
+    "SIGNATURE": "Enis Çebi Family"
+  }
+}

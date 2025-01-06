@@ -1,31 +1,30 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
 export class HomepageComponent implements OnInit {
 
 
-
   services = [
-    { icon: 'bi-wifi', name: 'Wi-Fi' },
-    { icon: 'bi-camera-video', name: '24/7 Güvenlik' },
-    { icon: 'bi-droplet', name: 'Su Sebili' },
-    { icon: 'bi-basket', name: 'Çamaşırhane' },
-    { icon: 'bi-emoji-smile', name: 'Yüz Tanıma' },
-    { icon: 'bi-lightning-charge', name: 'Kesintisiz Kaynaklar' },
-    { icon: 'bi-moon-stars', name: 'Mescid' },
-    { icon: 'bi-door-closed', name: 'Kartlı Oda Sistemi' },
-    { icon: 'bi-person-arms-up', name: 'Spor Salonu' },
-    { icon: 'bi-stars', name: 'Temizlik' },
-    { icon: 'bi-book', name: 'Kütüphane' },
-    { icon: 'bi-fire', name: 'Yangın Sensörü' }
-
+    { icon: 'bi-wifi', name: 'SERVICE.WIFI.NAME' },
+    { icon: 'bi-camera-video', name: 'SERVICE.24_7_SECURITY.NAME' },
+    { icon: 'bi-droplet', name: 'SERVICE.WATER_DISPENSER.NAME' },
+    { icon: 'bi-basket', name: 'SERVICE.LAUNDRY.NAME' },
+    { icon: 'bi-emoji-smile', name: 'SERVICE.FACE_RECOGNITION.NAME' },
+    { icon: 'bi-lightning-charge', name: 'SERVICE.UNINTERRUPTED_RESOURCES.NAME' },
+    { icon: 'bi-moon-stars', name: 'SERVICE.MOSQUE.NAME' },
+    { icon: 'bi-door-closed', name: 'SERVICE.CARD_ACCESS_ROOM_SYSTEM.NAME' },
+    { icon: 'bi-person-arms-up', name: 'SERVICE.GYM.NAME' },
+    { icon: 'bi-stars', name: 'SERVICE.CLEANING.NAME' },
+    { icon: 'bi-book', name: 'SERVICE.LIBRARY.NAME' },
+    { icon: 'bi-fire', name: 'SERVICE.FIRE_SENSOR.NAME' }
   ];
 
   screenWidth: number;

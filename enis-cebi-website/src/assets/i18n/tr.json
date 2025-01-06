@@ -1,0 +1,92 @@
+{
+  "NAVBAR": {
+    "OUR_DORMS": "Yurtlarımız",
+    "GALLERY_AND_FACILITIES": "Galeri ve İmkanlar",
+    "ABOUT_US": "Hakkımızda",
+    "OUR_EVENTS": "Etkinliklerimiz",
+    "CONTACT_US": "İletişim"
+  },
+  "facilities": {
+    "serviceTitle": "Ücretsiz Servis",
+    "serviceDescription1": "08:00 - 17:00 Saatleri arasında İstanbul Gelişim Üniversitesi'ne ders programlarına göre belirlenen saatlerde servisimiz vardır.",
+    "serviceDescription2": "08:00 - 17:00 Saatleri arasında belirli saatlerde Metrobüse servisimiz vardır.",
+    "earthquakeTitle": "Deprem Güvenliği",
+    "earthquakeDescription": "Erkek yurdumuzun binası bölgenin tek yurt ruhsatı ile yapılmış binası olma özelliğine sahiptir. Erkek yurdumuzun binası ise son deprem yönetmeliğine göre yapılmış ve ilk faaliyetine yurt olarak başlamıştır.",
+    "transportTitle": "Kamil Koç & Pamukkale",
+    "transportDescription": "Rahatlığınız bizim için her daim önemli. Bu sebeple şirket bünyesinde olan terminallerimiz sayesinde hem ekonomik yolculuk edin hem de servislerle yurtlarımızın önünden binerek ulaşım kolaylığınız olsun.",
+    "roomsTitle": "Odalarımız"
+  },
+  "ENIS_CEBI_YURTLARI": "Enis Çebi Yurtları",
+  "NEW_GIRL_DORM": "Yeni Nesil Kız Öğrenci Yurdu Sitesine Git",
+  "ABOUT_US": "Hakkımızda",
+  "ABOUT_US_CONTENT": "CEBEN İnşaat, 2008 yılından bu yana İnşaat ve Turizm sektöründe faaliyet göstermektedir. 2013'ten itibaren yurt hizmetlerinde fark yaratmak amacıyla sektöre giriş yaptık. Şehir dışında yaşamanın zorluklarını tecrübe etmiş bireyler olarak, öğrencilerimize aile sıcaklığında bir yaşam sunmayı amaçlıyoruz.",
+  "ENIS_CEBI_FAMILY": "Enis Çebi Ailesi",
+  "CLICK_FOR_MORE": "Daha fazlası için tıklayın",
+  "OUR_SERVICES": "Hizmetlerimiz",
+  "EVENT_MOMENTS": "Etkinliklerimizden Anlar",
+  "CONTACT": "İletişim",
+  "CONTACT_TEXT": "Tüm soru, görüş ve önerileriniz için çekinmeden bizimle iletişim kurabilirsiniz.",
+  "CONTACT_PHONE_1": "Danışma: +90 546 676 98 78",
+  "CONTACT_PHONE_2": "Erkek Yurdu Müdüriyet: +90 546 232 47 24",
+  "CONTACT_ADDRESS": "Adres: Üniversite Mh. Mareşal Cad. No:60 Parseller - Avcılar/İstanbul",
+  "SERVICE": {
+    "WIFI": {
+      "NAME": "Wi-Fi",
+      "DESC": "Fiber internet altyapısıyla internete her katta erişim."
+    },
+    "24_7_SECURITY": {
+      "NAME": "24/7 Güvenlik",
+      "DESC": "Bütün ortak alanlar, dış mekanlar 7/24 kayıtta."
+    },
+    "WATER_DISPENSER": {
+      "NAME": "Su Sebili",
+      "DESC": "Katlarda hem içme suyu hem de sıcak su 7/24 hazır."
+    },
+    "LAUNDRY": {
+      "NAME": "Çamaşırhane",
+      "DESC": "Ücretsiz kullanım."
+    },
+    "FACE_RECOGNITION": {
+      "NAME": "Yüz Tanıma",
+      "DESC": "Hem güvenliğiniz için hem de imzalı yoklama yerine teknolojik sistem."
+    },
+    "UNINTERRUPTED_RESOURCES": {
+      "NAME": "Kesintisiz Kaynaklar",
+      "DESC": "Elektriğin kesilmesi bizi etkilemez."
+    },
+    "MOSQUE": {
+      "NAME": "Mescid",
+      "DESC": "7/24 Açık."
+    },
+    "CARD_ACCESS_ROOM_SYSTEM": {
+      "NAME": "Kartlı Oda Sistemi",
+      "DESC": "Odalarınız sadece size ve oda arkadaşlarınıza aittir."
+    },
+    "GYM": {
+      "NAME": "Spor Salonu",
+      "DESC": "Sağlıklı yaşam için uygun ortam."
+    },
+    "CLEANING": {
+      "NAME": "Temizlik",
+      "DESC": "Sağlığın ve hijyenin için en iyi ürünlerini kullanan profesyonel eller."
+    },
+    "LIBRARY": {
+      "NAME": "Kütüphane",
+      "DESC": "Çeşitli kitaplarla donatılmış okuma alanı."
+    },
+    "FIRE_SENSOR": {
+      "NAME": "Yangın Sensörü",
+      "DESC": "Erkek yurdunda her odada yangın fiskiyesi, erkek yurdumuzda katlarda itfaye hortumu mevcuttur."
+    }
+  },
+  "ABOUT": {
+    "IMAGE_ALT": "Bina Görseli",
+    "TITLE": "Hakkımızda",
+    "PARAGRAPH_1": "CEBEN İNŞAAT SAN. ve TİC. LTD. Şirketi olarak 2008 yılından bu yana İnşaat ve Turizm sektöründe hizmet vermekteyiz. Bir aile şirketi olan CEBEN İnşaat, İç Mimar Ercan Çebi ve İnşaat Mühendisi Emrah Çebi tarafından yönetilmektedir.",
+    "PARAGRAPH_2": "Şirket olarak 2013 yılında alışılmışın dışında bir yurt hizmeti sunmak amacıyla sektöre hızlı ve başarılı bir giriş yaptık.",
+    "PARAGRAPH_3": "Öğrencilik yıllarında şehir dışında yaşamanın zorluklarını tecrübe etmiş bireyler olarak, öğrencilerimizin ailelerinden ve evlerinden uzakta geçirdikleri hayatı kolaylaştırmayı hedefliyoruz.",
+    "PARAGRAPH_4": "Öğrencilerimizin geriye dönüp baktıklarında aile sıcaklığında bir yurt yaşantısı geçmiş olmaları ve bizleri o yılların bir parçası olarak görmeleri öncelikli temennimizdir.",
+    "PARAGRAPH_5": "Aramıza katılan herkesi Enis Çebi ailesinin vazgeçilmez bir bireyi olarak görüyor, her geçen yıl büyüyen ailemizle gurur duyuyoruz.",
+    "SIGNATURE": "Enis Çebi Ailesi"
+  }
+}
