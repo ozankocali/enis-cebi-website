@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LanguageService } from '../../language.service';
+import { last } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -9,14 +11,27 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-   public lang: string = "tr"
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['tr', 'en']);
-    this.translate.setDefaultLang('tr');
-    this.translate.use('tr');
+  public lang: string = "tr"
+  constructor(private languageService: LanguageService) {
+    this.lang = this.languageService.getCurrentLanguage()
+
   }
-  useLanguage(language: string): void {
-    this.translate.use(language);
-    this.lang = language;
-}
+  
+  useLanguage(lang: string): void {
+    this.languageService.setLanguage(lang); // Kullanıcı seçimini uygula
+    this.lang = this.languageService.getCurrentLanguage()
+  }
+
+  getLanguageName(langCode: string): string {
+    switch (langCode) {
+      case 'en':
+        return 'English';
+      case 'tr':
+        return 'Türkçe';
+      case 'ar':
+        return 'Arabic';
+      default:
+        return 'Unknown Language';
+    }
+  }
 }

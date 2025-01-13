@@ -4,7 +4,6 @@
             <img src="/assets/enis_cebi_logo.png" alt="Logo" class="d-inline-block"
                 style="object-fit: contain; width: 164px;" />
         </a>
-       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-3 mb-lg-0" style="font-size: 1.25rem;">
                 <li class="nav-item m-2">
@@ -26,16 +25,17 @@
                 <li class="nav-item m-2">
                     <a class="nav-link active" aria-current="page" href="/#">{{ 'NAVBAR.CONTACT_US' | translate }}</a>
                 </li>
-               
+            
             </ul>
         </div>
         <div class="dropdown ">
             <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                {{lang}}
+                {{getLanguageName(lang)}}
             </button>
             <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                 <li><button class="dropdown-item" (click)="useLanguage('en')">English</button></li>
                 <li><button class="dropdown-item" (click)="useLanguage('tr')">Türkçe</button></li>
+                <li><button class="dropdown-item" (click)="useLanguage('ar')">Arabic</button></li>
             </ul>
         </div>
     </div>
