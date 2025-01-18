@@ -106,7 +106,13 @@
 
 .service-item {
     width: 25%; /* 4 ikon yan yana */
+    cursor: pointer;
+    color: inherit;
+   
 }
+.service-item:hover .icon-container {
+    transform: scale(1.15);
+  }
 
 .icon-container {
     background-color: #ffc108;
