@@ -41,7 +41,9 @@
     position: relative;
     margin-left: -10%;
     z-index: 2;
-    background-color: pink; position: relative; overflow: hidden;
+    background-color: pink;
+    position: relative;
+    overflow: hidden;
 }
 
 .tilted-image-right:hover {
@@ -62,7 +64,7 @@
 }
 
 .tilted-image-left:hover {
-    background-color:  rgb(136, 193, 211);
+    background-color: rgb(136, 193, 211);
 }
 
 .tilted-image-left img {
@@ -95,6 +97,14 @@
     display: block;
 }
 
+.carousel img {
+    transition: transform 0.3s ease;
+}
+
+.carousel img:hover {
+    transform: scale(1.03);
+}
+
 .carousel-item {
     transition: transform 10s linear;
 }
@@ -105,14 +115,16 @@
 }
 
 .service-item {
-    width: 25%; /* 4 ikon yan yana */
+    width: 25%;
+    /* 4 ikon yan yana */
     cursor: pointer;
     color: inherit;
-   
+
 }
+
 .service-item:hover .icon-container {
     transform: scale(1.15);
-  }
+}
 
 .icon-container {
     background-color: #ffc108;
@@ -125,6 +137,17 @@
 /* Ekran boyutu 800px veya daha küçükse */
 @media (max-width: 800px) {
     .service-item {
-        width: 50%; /* 2 ikon yan yana */
+        width: 50%;
+        /* 2 ikon yan yana */
     }
+}
+
+.enlarge-on-hover {
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    /* İsteğe bağlı, el işareti olsun isterseniz ekleyin */
+}
+
+.enlarge-on-hover:hover {
+    transform: scale(1.02);
 }

@@ -20,9 +20,17 @@
 }
 
 .icon-container-mini {
-    background-color:#bfd7da;
+    background-color: #bfd7da;
     border-radius: 50%;
     width: 8vh;
     height: 8vh;
     font-size: 4vh;
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
 }

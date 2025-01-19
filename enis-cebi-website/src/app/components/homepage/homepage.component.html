@@ -13,25 +13,26 @@
         </div>
     </div>
 
-   <section id="ourDorms">
-     <div class="image-container">
-    <div class="tilted-image-left">
-        <img src="/assets/enis_cebi_logo.png" alt="Logo" width="50%" height="100%" class="img-fluid p-3 transition"
-            style="object-fit: contain;  margin-right: 15%;" />
-            <span class="site-link">{{ 'ENIS_CEBI_YURTLARI' | translate }}</span>
+    <section id="ourDorms">
+        <div class="image-container">
+            <div class="tilted-image-left">
+                <img src="/assets/enis_cebi_logo.png" alt="Logo" width="50%" height="100%"
+                    class="img-fluid p-3 transition" style="object-fit: contain;  margin-right: 15%;" />
+                <span class="site-link">{{ 'ENIS_CEBI_YURTLARI' | translate }}</span>
 
-    </div>
+            </div>
 
-    <div class="tilted-image-right">
-        <a class="img-fluid d-flex justify-content-center align-items-center"
-            style="object-fit: contain; position: relative;" href="http://yeninesilogrenciyurtlari.com/"
-            target="_blank">
-            <img src="/assets/yeni_nesil_kiz_logo.png" alt="Logo" width="60%" height="100%"
-                class="img-fluid p-1 transition" />
-                <span class="site-link">{{ 'NEW_GIRL_DORM' | translate }}</span>
-            </a>
-    </div>
-</div></section>
+            <div class="tilted-image-right">
+                <a class="img-fluid d-flex justify-content-center align-items-center"
+                    style="object-fit: contain; position: relative;" href="http://yeninesilogrenciyurtlari.com/"
+                    target="_blank">
+                    <img src="/assets/yeni_nesil_kiz_logo.png" alt="Logo" width="60%" height="100%"
+                        class="img-fluid p-1 transition" />
+                    <span class="site-link">{{ 'NEW_GIRL_DORM' | translate }}</span>
+                </a>
+            </div>
+        </div>
+    </section>
     <div>
         <div *ngIf="screenWidth>800" class="row">
             <div class="col-6">
@@ -69,269 +70,315 @@
     <div>
         <h2 class="text-center mt-3 mb-5">{{ 'OUR_SERVICES' | translate }}</h2>
         <div class="row services-container">
-          <a
-            *ngFor="let service of services"
-            href="/facilities"  
-            class="service-item d-flex flex-column align-items-center mb-3 text-decoration-none"
-          >
-            <div class="icon-container d-flex justify-content-center col-3 align-items-center">
-              <i [class]="service.icon"></i>
-            </div>
-            <p class="mt-3">{{ service.name | translate }}</p>
-          </a>
-        </div>
-      </div>
-
-    <div *ngIf="screenWidth>=800" class="container-fluid">
-        <div class="row" style="align-items: end;">
-            <div class=" col-3">
-                <img src="/assets/miniCarousel/4.png" alt="Logo" style="width: 100%; ;" />
-
-            </div>
-            <div class="col-5">
-                <img src="/assets/miniCarousel/5.png" alt="Logo" style="width: 100%;" />
-
-            </div>
-            <div class="col-4">
-                <img src="/assets/miniCarousel/3.png" alt="Logo" style="width: 100%;" />
-
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-1"></div>
-
-            <div class="col-5">
-                <img src="/assets/miniCarousel/2.png" alt="Logo" style="width: 100%;" />
-
-            </div>
-            <div class="col-4">
-                <img src="/assets/miniCarousel/1.png" alt="Logo" style="width: 100%;" />
-
-            </div>
-            <div class="col-2"></div>
-
+            <a *ngFor="let service of services" href="/facilities"
+                class="service-item d-flex flex-column align-items-center mb-3 text-decoration-none">
+                <div class="icon-container d-flex justify-content-center col-3 align-items-center">
+                    <i [class]="service.icon"></i>
+                </div>
+                <p class="mt-3">{{ service.name | translate }}</p>
+            </a>
         </div>
     </div>
 
-    <div *ngIf="screenWidth<800" class="container-fluid">
+    <!-- Ekran genişliği 800px ve üzeriyse -->
+    <div *ngIf="screenWidth >= 800" class="container-fluid">
+        <div class="row" style="align-items: end;">
+            <div class="col-3">
+                <img class="enlarge-on-hover" src="/assets/miniCarousel/4.png" alt="Logo"
+                    style="width: 100%; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imgModal"
+                    (click)="showImage('/assets/miniCarousel/4.png')" />
+            </div>
+            <div class="col-5">
+                <img class="enlarge-on-hover" src="/assets/miniCarousel/5.png" alt="Logo"
+                    style="width: 100%; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imgModal"
+                    (click)="showImage('/assets/miniCarousel/5.png')" />
+            </div>
+            <div class="col-4">
+                <img class="enlarge-on-hover" src="/assets/miniCarousel/3.png" alt="Logo"
+                    style="width: 100%; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imgModal"
+                    (click)="showImage('/assets/miniCarousel/3.png')" />
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-1"></div>
+            <div class="col-5">
+                <img class="enlarge-on-hover" src="/assets/miniCarousel/2.png" alt="Logo" style="width: 100%; cursor: pointer;"
+                    data-bs-toggle="modal" data-bs-target="#imgModal"
+                    (click)="showImage('/assets/miniCarousel/2.png')" />
+            </div>
+            <div class="col-4">
+                <img class="enlarge-on-hover" src="/assets/miniCarousel/1.png" alt="Logo" style="width: 100%; cursor: pointer;"
+                    data-bs-toggle="modal" data-bs-target="#imgModal"
+                    (click)="showImage('/assets/miniCarousel/1.png')" />
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+    <!-- Ekran genişliği 800px’ten küçükse -->
+    <div *ngIf="screenWidth < 800" class="container-fluid">
         <div class="row">
             <div class="col p-1">
-                <img src="/assets/miniCarousel/4.png" alt="Logo" style="width: 100%; ;" />
+                <img class="enlarge-on-hover" src="/assets/miniCarousel/4.png" alt="Logo" style="width: 100%; cursor: pointer;"
+                    data-bs-toggle="modal" data-bs-target="#imgModal"
+                    (click)="showImage('/assets/miniCarousel/4.png')" />
             </div>
             <div class="col p-1">
-                <img src="/assets/miniCarousel/5.png" alt="Logo" style="width: 100%;" />
-            </div>
-        </div>
-        <div class="row mt-1">
-            <div class="col p-1">
-                <img src="/assets/miniCarousel/3.png" alt="Logo" style="width: 100%;" />
-            </div>
-            <div class="col p-1">
-                <img src="/assets/miniCarousel/2.png" alt="Logo" style="width: 100%;" />
+                <img class="enlarge-on-hover" src="/assets/miniCarousel/5.png" alt="Logo" style="width: 100%; cursor: pointer;"
+                    data-bs-toggle="modal" data-bs-target="#imgModal"
+                    (click)="showImage('/assets/miniCarousel/5.png')" />
             </div>
         </div>
+
         <div class="row mt-1">
             <div class="col p-1">
-                <img src="/assets/miniCarousel/1.png" alt="Logo" style="width: 100%;" />
+                <img class="enlarge-on-hover" src="/assets/miniCarousel/3.png" alt="Logo" style="width: 100%; cursor: pointer;"
+                    data-bs-toggle="modal" data-bs-target="#imgModal"
+                    (click)="showImage('/assets/miniCarousel/3.png')" />
+            </div>
+            <div class="col p-1">
+                <img class="enlarge-on-hover" src="/assets/miniCarousel/2.png" alt="Logo" style="width: 100%; cursor: pointer;"
+                    data-bs-toggle="modal" data-bs-target="#imgModal"
+                    (click)="showImage('/assets/miniCarousel/2.png')" />
+            </div>
+        </div>
+
+        <div class="row mt-1">
+            <div class="col p-1">
+                <img class="enlarge-on-hover" src="/assets/miniCarousel/1.png" alt="Logo" style="width: 100%; cursor: pointer;"
+                    data-bs-toggle="modal" data-bs-target="#imgModal"
+                    (click)="showImage('/assets/miniCarousel/1.png')" />
             </div>
         </div>
     </div>
 
 
     <div style="text-align: center;">
-      <section id="events">
-        <h1>{{ 'EVENT_MOMENTS' | translate }}</h1>
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col" style="display: block; margin: auto;  width: max-content;"> <img
-                                src="/assets/activities/activity1.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%;" />
-                        </div>
-                        <div class="col" style="display: block; margin: auto;"> <img
-                                src="/assets/activities/activity2.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%;" />
-                        </div>
+        <section id="events">
+            <h1>{{ 'EVENT_MOMENTS' | translate }}</h1>
 
-                        <div class="col" style="display: block; margin: auto;"> <img
-                                src="/assets/activities/activity3.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%;" />
-                        </div>
-                        <div class="col" style="display: block; margin: auto; width: max-content;"> <img
-                                src="/assets/activities/activity4.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%; " />
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col" style="display: block; margin: auto; width: max-content;">
+                                <img src="/assets/activities/activity1.jpg" alt="activity1"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity1.jpg')" />
+                            </div>
+                            <div class="col" style="display: block; margin: auto;">
+                                <img src="/assets/activities/activity2.jpg" alt="activity2"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity2.jpg')" />
+                            </div>
+                            <div class="col" style="display: block; margin: auto;">
+                                <img src="/assets/activities/activity3.jpg" alt="activity3"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity3.jpg')" />
+                            </div>
+                            <div class="col" style="display: block; margin: auto; width: max-content;">
+                                <img src="/assets/activities/activity4.jpg" alt="activity4"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity4.jpg')" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row" style="text-align: center;">
 
-                        <div class="col" style="display: block; margin: auto;"> <img
-                                src="/assets/activities/activity5.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%; " />
-                        </div>
-
-                        <div class="col" style="display: block; margin: auto;"> <img
-                                src="/assets/activities/activity6.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%; " />
-                        </div>
-                        <div class="col" style="display: block; margin: auto;"> <img
-                                src="/assets/activities/activity7.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%;" />
-                        </div>
-                        <div class="col" style="display: block; margin: auto;"> <img
-                                src="/assets/activities/activity8.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%;" />
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col" style="display: block; margin: auto;">
+                                <img src="/assets/activities/activity5.jpg" alt="activity5"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity5.jpg')" />
+                            </div>
+                            <div class="col" style="display: block; margin: auto;">
+                                <img src="/assets/activities/activity6.jpg" alt="activity6"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity6.jpg')" />
+                            </div>
+                            <div class="col" style="display: block; margin: auto;">
+                                <img src="/assets/activities/activity7.jpg" alt="activity7"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity7.jpg')" />
+                            </div>
+                            <div class="col" style="display: block; margin: auto;">
+                                <img src="/assets/activities/activity8.jpg" alt="activity8"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity8.jpg')" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col" style="display: block; margin: auto;"> <img
-                                src="/assets/activities/activity9.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%;" />
-                        </div>
-                        <div class="col" style="display: block; margin: auto;"> <img
-                                src="/assets/activities/activity10.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%;" />
-                        </div>
-                        <div class="col" style="display: block; margin: auto;"> <img
-                                src="/assets/activities/activity11.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%;" />
-                        </div>
-                        <div class="col" style="display: block; margin: auto;"> <img
-                                src="/assets/activities/activity12.jpg" alt="Logo"
-                                style="object-fit: contain;width: 100%;" />
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col" style="display: block; margin: auto;">
+                                <img src="/assets/activities/activity9.jpg" alt="activity9"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity9.jpg')" />
+                            </div>
+                            <div class="col" style="display: block; margin: auto;">
+                                <img src="/assets/activities/activity10.jpg" alt="activity10"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity10.jpg')" />
+                            </div>
+                            <div class="col" style="display: block; margin: auto;">
+                                <img src="/assets/activities/activity11.jpg" alt="activity11"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity11.jpg')" />
+                            </div>
+                            <div class="col" style="display: block; margin: auto;">
+                                <img src="/assets/activities/activity12.jpg" alt="activity12"
+                                    style="object-fit: contain; width: 100%; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#imgModal"
+                                    (click)="showImage('/assets/activities/activity12.jpg')" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-      </section>
-      <section id="contacts">
-        <div *ngIf="screenWidth>=800">
-            <div class="row">
-                <div class="col-9" style="background-color:#72d4e8;">
-                    <div style="align-self: self-start; color: #233e45;">
-                        <br>
-                        <h3>{{ 'CONTACT' | translate }}</h3>
-                        <h3>{{ 'CONTACT_TEXT' | translate }}</h3>
+        </section>
+        <section id="contacts">
+            <div *ngIf="screenWidth>=800">
+                <div class="row">
+                    <div class="col-9" style="background-color:#72d4e8;">
+                        <div style="align-self: self-start; color: #233e45;">
+                            <br>
+                            <h3>{{ 'CONTACT' | translate }}</h3>
+                            <h3>{{ 'CONTACT_TEXT' | translate }}</h3>
 
-                    </div>
-                    <div class="mt-5" style="vertical-align: bottom; color:#233e45;">
-                        <h5>{{ 'CONTACT_PHONE_1' | translate }}</h5>
-                        <h5>{{ 'CONTACT_PHONE_2' | translate }}</h5>
-                        <div class="row">
-                            <div class="col-10">
-                                <h5> {{ 'CONTACT_ADDRESS' | translate }}
-                                </h5>
-                            </div>
-                            <div class="col-2">
-                                <a href="https://x.com/eniscebiyurtlar" style="color: currentColor;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
-                                        fill="currentColor" class="bi bi-twitter-x m-2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
-                                    </svg>
-                                </a>
-                                <a href="https://www.facebook.com/eniscebiyurtlariCOM/?locale=tr_TR"
-                                    style="color: currentColor;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
-                                        fill="currentColor" class="bi bi-facebook m-2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-                                    </svg>
-                                </a>
-                                <a href="https://www.instagram.com/eniscebiyurtlari/" style="color: currentColor;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
-                                        fill="currentColor" class="bi bi-instagram m-2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                                    </svg>
-                                </a>
+                        </div>
+                        <div class="mt-5" style="vertical-align: bottom; color:#233e45;">
+                            <h5>{{ 'CONTACT_PHONE_1' | translate }}</h5>
+                            <h5>{{ 'CONTACT_PHONE_2' | translate }}</h5>
+                            <div class="row">
+                                <div class="col-10">
+                                    <h5> {{ 'CONTACT_ADDRESS' | translate }}
+                                    </h5>
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://x.com/eniscebiyurtlar" style="color: currentColor;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
+                                            fill="currentColor" class="bi bi-twitter-x m-2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.facebook.com/eniscebiyurtlariCOM/?locale=tr_TR"
+                                        style="color: currentColor;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
+                                            fill="currentColor" class="bi bi-facebook m-2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/eniscebiyurtlari/" style="color: currentColor;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
+                                            fill="currentColor" class="bi bi-instagram m-2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-3">
+                        <div class="container" style=" overflow: hidden;">
+                            <img src="/assets/iletisim.png" alt="Logo" style="height: auto; width: 100%;" />
+                        </div>
+                    </div>
                 </div>
-                <div class="col-3">
+                <div class="row">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.1203299890412!2d28.711567799999997!3d41.0007394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa0fb1c0ca025%3A0x916257c126269da5!2zRW5pcyDDh2ViaSBZdXJ0bGFyxLE!5e0!3m2!1str!2str!4v1732977013377!5m2!1str!2str"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div *ngIf="screenWidth<800">
+                <div class="row">
                     <div class="container" style=" overflow: hidden;">
                         <img src="/assets/iletisim.png" alt="Logo" style="height: auto; width: 100%;" />
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.1203299890412!2d28.711567799999997!3d41.0007394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa0fb1c0ca025%3A0x916257c126269da5!2zRW5pcyDDh2ViaSBZdXJ0bGFyxLE!5e0!3m2!1str!2str!4v1732977013377!5m2!1str!2str"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-        <div *ngIf="screenWidth<800">
-            <div class="row">
-                <div class="container" style=" overflow: hidden;">
-                    <img src="/assets/iletisim.png" alt="Logo" style="height: auto; width: 100%;" />
-                </div>
-                <div style="background-color:#72d4e8;">
-                    <div style="align-self: self-start; color: #233e45;">
-                        <br>
-                        <h1>{{ 'CONTACT' | translate }}</h1>
-                        <h3>{{ 'CONTACT_TEXT' | translate }}
-                        </h3>
-                    </div>
-                    <div class="mt-5" style="vertical-align: bottom; color:#233e45;">
-                        <h5>{{ 'CONTACT_PHONE_1' | translate }}</h5>
-                        <h5>{{ 'CONTACT_PHONE_2' | translate }}</h5>
-                        <div class="row">
-                            <div class="col-10">
-                                <h5> {{ 'CONTACT_ADDRESS' | translate }}
-                                </h5>
-                            </div>
-                            <div class="col-2">
-                                <a href="https://x.com/eniscebiyurtlar" style="color: currentColor;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
-                                        fill="currentColor" class="bi bi-twitter-x m-2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
-                                    </svg>
-                                </a>
-                                <a href="https://www.facebook.com/eniscebiyurtlariCOM/?locale=tr_TR"
-                                    style="color: currentColor;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
-                                        fill="currentColor" class="bi bi-facebook m-2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-                                    </svg>
-                                </a>
-                                <a href="https://www.instagram.com/eniscebiyurtlari/" style="color: currentColor;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
-                                        fill="currentColor" class="bi bi-instagram m-2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                                    </svg>
-                                </a>
+                    <div style="background-color:#72d4e8;">
+                        <div style="align-self: self-start; color: #233e45;">
+                            <br>
+                            <h1>{{ 'CONTACT' | translate }}</h1>
+                            <h3>{{ 'CONTACT_TEXT' | translate }}
+                            </h3>
+                        </div>
+                        <div class="mt-5" style="vertical-align: bottom; color:#233e45;">
+                            <h5>{{ 'CONTACT_PHONE_1' | translate }}</h5>
+                            <h5>{{ 'CONTACT_PHONE_2' | translate }}</h5>
+                            <div class="row">
+                                <div class="col-10">
+                                    <h5> {{ 'CONTACT_ADDRESS' | translate }}
+                                    </h5>
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://x.com/eniscebiyurtlar" style="color: currentColor;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
+                                            fill="currentColor" class="bi bi-twitter-x m-2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.facebook.com/eniscebiyurtlariCOM/?locale=tr_TR"
+                                        style="color: currentColor;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
+                                            fill="currentColor" class="bi bi-facebook m-2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/eniscebiyurtlari/" style="color: currentColor;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px;height: 32px;"
+                                            fill="currentColor" class="bi bi-instagram m-2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.1203299890412!2d28.711567799999997!3d41.0007394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa0fb1c0ca025%3A0x916257c126269da5!2zRW5pcyDDh2ViaSBZdXJ0bGFyxLE!5e0!3m2!1str!2str!4v1732977013377!5m2!1str!2str"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
-            <div class="row">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.1203299890412!2d28.711567799999997!3d41.0007394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa0fb1c0ca025%3A0x916257c126269da5!2zRW5pcyDDh2ViaSBZdXJ0bGFyxLE!5e0!3m2!1str!2str!4v1732977013377!5m2!1str!2str"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-      </section>
+        </section>
     </div>
     <div>
-        <!-- Button trigger modal -->
         <button [hidden]="true" ng type="button" class="btn btn-primary" data-bs-toggle="modal" id="modalButton"
             data-bs-target="#exampleModal">
             Launch demo modal
         </button>
 
-        <!-- Modal -->
         <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -341,6 +388,19 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <img [src]="selectedImage" class="img-fluid w-100" alt="Bigger Preview" style="object-fit: contain;" />
+            </div>
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"
+                aria-label="Close"></button>
         </div>
     </div>
 </div>

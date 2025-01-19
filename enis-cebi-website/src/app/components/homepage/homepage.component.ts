@@ -30,6 +30,9 @@ export class HomepageComponent implements OnInit {
   screenWidth: number;
   screenHeight: number;
 
+  selectedImage: string = '';
+
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     if (isPlatformBrowser(this.platformId)) {
       this.screenWidth = window.innerWidth;
@@ -50,5 +53,9 @@ export class HomepageComponent implements OnInit {
   onResize(event: any) {
     this.screenWidth = event.target.innerWidth;
     this.screenHeight = event.target.innerHeight;
+  }
+
+  showImage(imagePath: string) {
+    this.selectedImage = imagePath;
   }
 }

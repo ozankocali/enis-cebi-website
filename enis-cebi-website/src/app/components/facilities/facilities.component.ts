@@ -25,4 +25,11 @@ export class FacilitiesComponent {
     { icon: 'bi-fire', name: 'SERVICE.FIRE_SENSOR.NAME', desc: 'SERVICE.FIRE_SENSOR.DESC' }
   ];
 
+  selectedImage: string = '';
+
+
+  showImage(imagePath: string) {
+    this.selectedImage = imagePath;
+  }
+
 }
