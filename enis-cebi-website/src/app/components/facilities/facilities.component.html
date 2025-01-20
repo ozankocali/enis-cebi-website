@@ -1,4 +1,4 @@
-<div style="margin-top: 114px;">
+<div>
   <div class="container mt-4">
     <div class="card custom-card">
       <div class="row g-0">
@@ -79,120 +79,57 @@
   </div>
   <div class="container">
     <h3 style="text-align: center;">{{ 'facilities.roomsTitle' | translate }}</h3>
-  
+
     <div class="row mt-1" style="width: fit-content;">
       <div class="col-4 p-1">
-        <img
-          src="/assets/facilities/5.png"
-          alt="Logo"
-          style="object-fit: contain; width: 100%; cursor: pointer;"
-          data-bs-toggle="modal"
-          data-bs-target="#imgModal"
-          (click)="showImage('/assets/facilities/5.png')"
-        />
+        <img src="/assets/facilities/5.png" alt="Logo" style="object-fit: contain; width: 100%; cursor: pointer;"
+          data-bs-toggle="modal" data-bs-target="#imgModal" (click)="showImage('/assets/facilities/5.png')" />
       </div>
       <div class="col-4 p-1">
-        <img
-          src="/assets/facilities/6.png"
-          alt="Logo"
-          style="object-fit: contain; width: 100%; cursor: pointer;"
-          data-bs-toggle="modal"
-          data-bs-target="#imgModal"
-          (click)="showImage('/assets/facilities/6.png')"
-        />
+        <img src="/assets/facilities/6.png" alt="Logo" style="object-fit: contain; width: 100%; cursor: pointer;"
+          data-bs-toggle="modal" data-bs-target="#imgModal" (click)="showImage('/assets/facilities/6.png')" />
       </div>
       <div class="col-4 p-1">
-        <img
-          src="/assets/facilities/7.png"
-          alt="Logo"
-          style="object-fit: contain; width: 100%; cursor: pointer;"
-          data-bs-toggle="modal"
-          data-bs-target="#imgModal"
-          (click)="showImage('/assets/facilities/7.png')"
-        />
+        <img src="/assets/facilities/7.png" alt="Logo" style="object-fit: contain; width: 100%; cursor: pointer;"
+          data-bs-toggle="modal" data-bs-target="#imgModal" (click)="showImage('/assets/facilities/7.png')" />
       </div>
     </div>
-  
+
     <div class="row mt-1">
       <div class="col-6 p-1">
-        <img
-          src="/assets/facilities/4.png"
-          alt="Logo"
-          style="object-fit: contain; width: 100%; cursor: pointer;"
-          data-bs-toggle="modal"
-          data-bs-target="#imgModal"
-          (click)="showImage('/assets/facilities/4.png')"
-        />
+        <img src="/assets/facilities/4.png" alt="Logo" style="object-fit: contain; width: 100%; cursor: pointer;"
+          data-bs-toggle="modal" data-bs-target="#imgModal" (click)="showImage('/assets/facilities/4.png')" />
       </div>
       <div class="col-6 p-1">
-        <img
-          src="/assets/facilities/8.png"
-          alt="Logo"
-          style="object-fit: contain; width: 100%; cursor: pointer;"
-          data-bs-toggle="modal"
-          data-bs-target="#imgModal"
-          (click)="showImage('/assets/facilities/8.png')"
-        />
+        <img src="/assets/facilities/8.png" alt="Logo" style="object-fit: contain; width: 100%; cursor: pointer;"
+          data-bs-toggle="modal" data-bs-target="#imgModal" (click)="showImage('/assets/facilities/8.png')" />
       </div>
     </div>
-  
+
     <div class="row mt-1">
       <div class="col-4 p-1">
-        <img
-          src="/assets/facilities/3.png"
-          alt="Logo"
-          style="object-fit: contain; width: 100%; cursor: pointer;"
-          data-bs-toggle="modal"
-          data-bs-target="#imgModal"
-          (click)="showImage('/assets/facilities/3.png')"
-        />
+        <img src="/assets/facilities/3.png" alt="Logo" style="object-fit: contain; width: 100%; cursor: pointer;"
+          data-bs-toggle="modal" data-bs-target="#imgModal" (click)="showImage('/assets/facilities/3.png')" />
       </div>
       <div class="col-4 p-1">
-        <img
-          src="/assets/facilities/2.png"
-          alt="Logo"
-          style="object-fit: contain; width: 100%; cursor: pointer;"
-          data-bs-toggle="modal"
-          data-bs-target="#imgModal"
-          (click)="showImage('/assets/facilities/2.png')"
-        />
+        <img src="/assets/facilities/2.png" alt="Logo" style="object-fit: contain; width: 100%; cursor: pointer;"
+          data-bs-toggle="modal" data-bs-target="#imgModal" (click)="showImage('/assets/facilities/2.png')" />
       </div>
       <div class="col-4 p-1">
-        <img
-          src="/assets/facilities/1.png"
-          alt="Logo"
-          style="object-fit: contain; width: 100%; cursor: pointer;"
-          data-bs-toggle="modal"
-          data-bs-target="#imgModal"
-          (click)="showImage('/assets/facilities/1.png')"
-        />
+        <img src="/assets/facilities/1.png" alt="Logo" style="object-fit: contain; width: 100%; cursor: pointer;"
+          data-bs-toggle="modal" data-bs-target="#imgModal" (click)="showImage('/assets/facilities/1.png')" />
       </div>
     </div>
   </div>
-  
-  <div
-    class="modal fade"
-    id="imgModal"
-    tabindex="-1"
-    aria-labelledby="imgModalLabel"
-    aria-hidden="true"
-  >
+
+  <div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
         <div class="modal-body p-0">
-          <img
-            [src]="selectedImage"
-            class="img-fluid w-100"
-            alt="Bigger Preview"
-            style="object-fit: contain;"
-          />
+          <img [src]="selectedImage" class="img-fluid w-100" alt="Bigger Preview" style="object-fit: contain;" />
         </div>
-        <button
-          type="button"
-          class="btn-close position-absolute top-0 end-0 m-2"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"
+          aria-label="Close"></button>
       </div>
     </div>
   </div>
