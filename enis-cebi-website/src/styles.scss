@@ -2,3 +2,12 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face {
+    src: url('/enis-cebi-website/src/assets/fonts/Roboto-Regular.ttf');
+    font-family: 'Roboto-Regular';
+}
+
+* {
+    font-family: 'Roboto-Regular';
+}

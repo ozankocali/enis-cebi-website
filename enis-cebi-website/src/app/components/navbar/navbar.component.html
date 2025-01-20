@@ -1,82 +1,65 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/#">
-        <img
-          src="/assets/enis_cebi_logo.png"
-          alt="Logo"
-          style="object-fit: contain; width: 164px;"
-        />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 1.25rem;">
-          <li class="nav-item m-2">
-            <a class="nav-link active" aria-current="page" href="/#ourDorms">
-              {{ 'NAVBAR.OUR_DORMS' | translate }}
-            </a>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/#">
+      <img src="/assets/enis_cebi_logo.png" alt="Logo" style="object-fit: contain; width: 164px;" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav mx-auto mb-3 mb-lg-0" style="font-size: 1.25rem; margin-right: 0px !important;">
+        <li class="nav-item m-2">
+          <a class="nav-link active" aria-current="page" href="/#ourDorms">
+            {{ 'NAVBAR.OUR_DORMS' | translate }}
+          </a>
+        </li>
+        <li class="nav-item m-2">
+          <a class="nav-link active" aria-current="page" href="/facilities">
+            {{ 'NAVBAR.GALLERY_AND_FACILITIES' | translate }}
+          </a>
+        </li>
+        <li class="nav-item m-2">
+          <a class="nav-link active" aria-current="page" href="/about">
+            {{ 'NAVBAR.ABOUT_US' | translate }}
+          </a>
+        </li>
+        <li class="nav-item m-2">
+          <a class="nav-link active" aria-current="page" href="/#events">
+            {{ 'NAVBAR.OUR_EVENTS' | translate }}
+          </a>
+        </li>
+        <li class="nav-item m-2">
+          <a class="nav-link active" aria-current="page" href="/#contacts">
+            {{ 'NAVBAR.CONTACT_US' | translate }}
+          </a>
+        </li>
+      </ul>
+
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          {{ getLanguageName(lang) }}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+          <li>
+            <button class="dropdown-item" (click)="useLanguage('en')">
+              English
+            </button>
           </li>
-          <li class="nav-item m-2">
-            <a class="nav-link active" aria-current="page" href="/facilities">
-              {{ 'NAVBAR.GALLERY_AND_FACILITIES' | translate }}
-            </a>
+          <li>
+            <button class="dropdown-item" (click)="useLanguage('tr')">
+              Türkçe
+            </button>
           </li>
-          <li class="nav-item m-2">
-            <a class="nav-link active" aria-current="page" href="/about">
-              {{ 'NAVBAR.ABOUT_US' | translate }}
-            </a>
-          </li>
-          <li class="nav-item m-2">
-            <a class="nav-link active" aria-current="page" href="/#events">
-              {{ 'NAVBAR.OUR_EVENTS' | translate }}
-            </a>
-          </li>
-          <li class="nav-item m-2">
-            <a class="nav-link active" aria-current="page" href="/#contacts">
-              {{ 'NAVBAR.CONTACT_US' | translate }}
-            </a>
+          <li>
+            <button class="dropdown-item" (click)="useLanguage('ar')">
+              Arabic
+            </button>
           </li>
         </ul>
-  
-        <div class="dropdown">
-          <button
-            class="btn btn-outline-secondary dropdown-toggle"
-            type="button"
-            id="languageDropdown"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {{ getLanguageName(lang) }}
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-            <li>
-              <button class="dropdown-item" (click)="useLanguage('en')">
-                English
-              </button>
-            </li>
-            <li>
-              <button class="dropdown-item" (click)="useLanguage('tr')">
-                Türkçe
-              </button>
-            </li>
-            <li>
-              <button class="dropdown-item" (click)="useLanguage('ar')">
-                Arabic
-              </button>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
-  </nav>
-  
+  </div>
+</nav>
