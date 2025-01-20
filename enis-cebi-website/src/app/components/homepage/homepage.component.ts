@@ -1,11 +1,12 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CommonModule,TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
@@ -33,7 +34,7 @@ export class HomepageComponent implements OnInit {
   selectedImage: string = '';
 
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private route: Router) {
     if (isPlatformBrowser(this.platformId)) {
       this.screenWidth = window.innerWidth;
       this.screenHeight = window.innerHeight;
@@ -44,7 +45,7 @@ export class HomepageComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    if (typeof document !== 'undefined') {
+    if (typeof document !== 'undefined' && !this.route.url.includes("#")) {
       document.getElementById("modalButton")?.click();
     }
   }
