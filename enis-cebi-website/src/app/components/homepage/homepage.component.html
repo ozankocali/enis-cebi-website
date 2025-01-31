@@ -44,8 +44,8 @@
                 </p>
                 <i>{{ 'ENIS_CEBI_FAMILY' | translate }}</i>
                 <br>
-                <button class="btn btn-warning" style="width: 60%;" translate>{{ 'CLICK_FOR_MORE' | translate
-                    }}</button>
+                <a href="/about" class="btn btn-warning" style="width: 60%;" translate>{{ 'CLICK_FOR_MORE' |
+                    translate}}</a>
             </div>
         </div>
         <div *ngIf="screenWidth<=800">
@@ -391,17 +391,18 @@
             </div>
         </div>
     </div>
-</div>
 
 
-<div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-body p-0">
-                <img [src]="selectedImage" class="img-fluid w-100" alt="Bigger Preview" style="object-fit: contain;" />
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <img [src]="selectedImage" class="img-fluid w-100" alt="Bigger Preview"
+                        style="object-fit: contain;" />
+                </div>
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
-            <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"
-                aria-label="Close"></button>
         </div>
     </div>
 </div>

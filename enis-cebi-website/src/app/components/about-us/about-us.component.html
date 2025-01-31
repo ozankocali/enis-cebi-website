@@ -1,9 +1,11 @@
-<div>
-  <div *ngIf="screenWidth>800" class="about-us-container">
-    <div class="about-us-image">
-      <img src="assets/enis_cebi_bina.jpg" alt="{{ 'ABOUT.IMAGE_ALT' | translate }}" style="object-fit: contain;" />
+<div class="container-fluid">
+  <div *ngIf="screenWidth>800" class="row">
+    <div class="col-6">
+      <div style="width: 100%;" class="tilted-image-left-1">
+        <img src="/assets/enis_cebi_bina.jpg" alt="Logo" width="100%" style="object-fit: contain;" />
+      </div>
     </div>
-    <div class="about-us-content" style="text-align: center;">
+    <div class="col-6 d-flex flex-column justify-content-center align-items-center mt-3" style="text-align: center;">
       <h2>{{ 'ABOUT.TITLE' | translate }}</h2>
       <p>
         {{ 'ABOUT.PARAGRAPH_1' | translate }}
@@ -23,32 +25,30 @@
       <p class="signature">{{ 'ABOUT.SIGNATURE' | translate }}</p>
     </div>
   </div>
-
-  <div *ngIf="screenWidth<800">
-    <div class="container" style="overflow: hidden;">
-      <img src="assets/enis_cebi_bina.jpg" alt="{{ 'ABOUT.IMAGE_ALT' | translate }}"
-        style="height: auto; width: 100%;" />
-    </div>
-    <div class="container-fluid">
-      <div class="about-us-content" style="text-align: center;">
-        <h2>{{ 'ABOUT.TITLE' | translate }}</h2>
-        <p>
-          {{ 'ABOUT.PARAGRAPH_1' | translate }}
-        </p>
-        <p>
-          {{ 'ABOUT.PARAGRAPH_2' | translate }}
-        </p>
-        <p>
-          {{ 'ABOUT.PARAGRAPH_3' | translate }}
-        </p>
-        <p>
-          {{ 'ABOUT.PARAGRAPH_4' | translate }}
-        </p>
-        <p>
-          {{ 'ABOUT.PARAGRAPH_5' | translate }}
-        </p>
-        <p class="signature">{{ 'ABOUT.SIGNATURE' | translate }}</p>
+  <div *ngIf="screenWidth<=800">
+    <div class="col">
+      <div style="width: 100%;">
+        <img src="/assets/enis_cebi_bina.jpg" alt="Logo" width="100%" style="object-fit: contain;" />
       </div>
+    </div>
+    <div class="col d-flex flex-column mt-1" style="text-align: center;">
+      <h2>{{ 'ABOUT.TITLE' | translate }}</h2>
+      <p>
+        {{ 'ABOUT.PARAGRAPH_1' | translate }}
+      </p>
+      <p>
+        {{ 'ABOUT.PARAGRAPH_2' | translate }}
+      </p>
+      <p>
+        {{ 'ABOUT.PARAGRAPH_3' | translate }}
+      </p>
+      <p>
+        {{ 'ABOUT.PARAGRAPH_4' | translate }}
+      </p>
+      <p>
+        {{ 'ABOUT.PARAGRAPH_5' | translate }}
+      </p>
+      <p class="signature">{{ 'ABOUT.SIGNATURE' | translate }}</p>
     </div>
   </div>
 </div>
